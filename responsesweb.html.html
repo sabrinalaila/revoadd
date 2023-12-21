@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sasa Food & Baverages</title>
+  </head>
+  <body>
+    <nav>
+      <img src="foodbaverage.jpg" alt="logo" class="logo" />
+      <ul class="hidden" id="navbar">
+        <a href="#" class="nav-item home" id="home">Home</a>
+        <a href="#our-products" class="nav-item" id="ourProducts">Our Products</a>
+        <a href="#vision" class="nav-item" id="visionMission">Vision</a>
+        <a href="#message-us" class="nav-item message" id="message"
+          >Message Us</a
+        >
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Hi <span id="halo-nama"></span>, Welcome To Our Responses Website</h1>
+      <h4> Your Food <br> Your Way <br> Your Time </h4>
+      <img 
+        src="foodbaverage.jpg"
+        alt="foodbaverage"
+        class="products"
+      />
+    </header>
+
+    <!-- Our Products -->
+
+    <section class="our-products" id="our-products">
+      <h2>Our Products</h2>
+      <div class="list-products">
+        <div class="products">
+          <img style="width: 250px;height: 200px;" src="food.jpg" alt="food" />
+          <p>Food</p>
+        </div>
+
+        <div class="products">
+          <img style="width: 250px;height: 200px;" src="beverage.jpeg" alt="beverage" />
+          <p>Baverages</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision" id="vision">
+        <h5>Vision & Mission</h5>
+      <div class="visimisi">
+        <div class="text">
+          <h3 style="text-align: center;">Our Vision</h3>
+          <p style="text-align: center;">
+            To become the ultimate foodie haven, making it effortless and joyous to order your favorite food and drinks, anytime, anywhere
+          </p>
+        </div>
+        <div class="text">
+          <h3>Our Mission</h3>
+          <ol type="1">
+            <li>Cultivate A Loyal Community</li>
+            <li>Elevate The Everyday Meal</li>
+            <li>Create an unforgettable experience</li>
+            <li>Create a welcoming and inclusive space</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Message Us -->
+
+    <section class="message" id="message-us">
+      <h2>Message Us</h2>
+      <div class="message-us">
+        <form name="message-form" onsubmit="return validateForm()">
+          <table>
+            <tr>
+              <td class="col-1"><p>Nama</p></td>
+              <td class="col-2"><p>:</p></td>
+              <td class="col-3">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Nama"
+                  name="name"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="col-1"><p>Tanggal Lahir</p></td>
+              <td class="col-2"><p>:</p></td>
+              <td class="col-3">
+                <input
+                  type="date"
+                  name="tanggal"
+                  id="date"
+                  nama="tanggal"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="col-1"><p>Jenis Kelamin</p></td>
+              <td class="col-2"><p>:</p></td>
+              <td class="col-3">
+                <input
+                  id="kelamin"
+                  type="radio"
+                  value="Laki-laki"
+                  class="jenis-kelamin"
+                  name="gender"
+                  required
+                />
+                <p>Laki-laki</p>
+                <input
+                  id="kelamin"
+                  type="radio"
+                  value="Perempuan"
+                  class="jenis-kelamin"
+                  name="gender"
+                  required
+                />
+                <p>Perempuan</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-1" style="vertical-align: top"><p>Pesan</p></td>
+              <td class="col-2" style="vertical-align: top"><p>:</p></td>
+              <td class="col-3">
+                <textarea
+                  id="pesan"
+                  name="message-from"
+                  cols="46"
+                  rows="10"
+                  required
+                ></textarea>
+              </td>
+            </tr>
+          </table>
+          <input type="submit" value="submit" class="submit-btn" id="submit" />
+        </form>
+        <div class="return" id="return">
+          <p class="point">Current time : <span id="time-api"></span></p>
+          <br />
+          <p class="point">Nama : <span id="sender-name"></span></p>
+          <p class="point">
+            Tanggal Lahir : <span id="sender-birth-date"></span>
+          </p>
+          <p class="point">Jenis Kelamin : <span id="sender-gender"></span></p>
+          <p class="point">Pesan : <span id="sender-message"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Java Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
